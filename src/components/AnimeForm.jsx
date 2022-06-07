@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AnimeLists from "./AnimeLists";
 import Spinner from "./Spinner";
 
@@ -46,14 +46,10 @@ function AnimeForm() {
     }
   };
 
-  useEffect(() => {
-    handleSubmit();
-  }, [text]);
-
   return (
     <div>
       <div className="flex justify-center">
-        <form onSubmit={handleSubmit}>
+        <form>
           <input
             type="text"
             value={text}
@@ -62,6 +58,7 @@ function AnimeForm() {
             className="border-2 border-black rounded-md mr-3 w-64 md:w-96"
           />
           <button
+            onClick={handleSubmit}
             type="submit"
             className="bg-black text-white rounded-md py-[2px] px-2"
           >
