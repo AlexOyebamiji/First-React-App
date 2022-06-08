@@ -16,7 +16,6 @@ function AnimeForm() {
     e.preventDefault();
     try {
       setLoading(true);
-      let isActive = true;
       const response = await fetch(
         `https://animechan.vercel.app/api/quotes/character?name=${text}`
       );
@@ -35,9 +34,6 @@ function AnimeForm() {
         setAnime(data);
         setLoading(false);
       }
-      return () => {
-        isActive = false;
-      };
     } catch (error) {
       setAnime(null);
       setErrorMessage(error.message);
