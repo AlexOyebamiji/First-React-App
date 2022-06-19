@@ -49,7 +49,7 @@ function AnimeForm() {
           <input
             type="text"
             value={text}
-            placeholder="Search Anime Name"
+            placeholder="Search Anime Character"
             onChange={handleChange}
             className="border-2 border-black rounded-md mr-3 w-64 md:w-96"
           />
